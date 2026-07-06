@@ -15,7 +15,7 @@
   <!-- Fonts: Fraunces (editorial serif) + Inter (functional sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -41,14 +41,12 @@
   <!-- ============================ HEADER ============================ -->
   <header class="site-header">
     <div class="container nav">
-      <a href="#home" class="brand" aria-label="KGMediaWorks home">
-        <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-          <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
-          <ellipse cx="20" cy="20" rx="8.5" ry="18.5" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
-          <circle cx="20" cy="20" r="6.4" fill="#009edf"/>
-          <circle cx="20" cy="20" r="2.4" fill="#05202f"/>
-        </svg>
-        <span class="brand__name">KG<b>Media</b>Works</span>
+      <a href="#home" class="brand" aria-label="KG MediaWorks — 360° Virtual Tours, home">
+        <span class="brand__kg" aria-hidden="true">K<i>G</i></span>
+        <span class="brand__wm" aria-hidden="true">
+          <span class="brand__main">MEDIAWORKS</span>
+          <span class="brand__tag">360° Virtual Tours</span>
+        </span>
       </a>
 
       <nav class="nav__links" aria-label="Primary">
@@ -71,7 +69,13 @@
   <!-- Mobile nav -->
   <div class="mobile-nav" id="mobileNav" aria-hidden="true">
     <div class="mobile-nav__top">
-      <span class="brand__name" style="color:#fff">KG<b>Media</b>Works</span>
+      <span class="brand" style="color:#fff">
+        <span class="brand__kg">K<i>G</i></span>
+        <span class="brand__wm">
+          <span class="brand__main">MEDIAWORKS</span>
+          <span class="brand__tag">360° Virtual Tours</span>
+        </span>
+      </span>
       <button class="nav__toggle" id="navClose" aria-label="Close menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
@@ -573,14 +577,12 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__intro">
-          <a href="#home" class="brand" aria-label="KGMediaWorks home">
-            <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-              <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
-              <ellipse cx="20" cy="20" rx="8.5" ry="18.5" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
-              <circle cx="20" cy="20" r="6.4" fill="#f2a541"/>
-              <circle cx="20" cy="20" r="2.4" fill="#0c3a38"/>
-            </svg>
-            <span class="brand__name">KG<b>Media</b>Works</span>
+          <a href="#home" class="brand" aria-label="KG MediaWorks — 360° Virtual Tours, home">
+            <span class="brand__kg" aria-hidden="true">K<i>G</i></span>
+            <span class="brand__wm" aria-hidden="true">
+              <span class="brand__main">MEDIAWORKS</span>
+              <span class="brand__tag">360° Virtual Tours</span>
+            </span>
           </a>
           <p>Immersive 360° virtual tours for resorts, hotels, wedding venues, and luxury stays worth exploring.</p>
           <p class="footer__contact">

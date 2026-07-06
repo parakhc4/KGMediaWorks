@@ -85,7 +85,7 @@ Radii are deliberately oversized. There are no sharp 90° corners on interactive
 - **Pill accent (brand blue)** — high-emphasis CTA. `--color-signal` bg, ink text.
 - **Pill ghost / ghost-light** — secondary action. Transparent, 1px border.
 - **Marquee strip** — full-bleed brand-blue bar above the header, scrolling capabilities separated by checkmark glyphs. The single high-energy accent.
-- **Navy header** — sticky deep-navy bar, serif wordmark, Inter nav links, white "Book a Shoot" pill.
+- **Navy header** — sticky deep-navy bar, "KG" monogram (blue G) + MEDIAWORKS wordmark with a "360° Virtual Tours" tagline set in Montserrat (`--font-logo`), Inter nav links, white "Book a Shoot" pill.
 - **Full-bleed hero** — layered gradient "scene" backdrop + 360° badge + pulsing hotspots, centered/left serif headline at display size, two pills, scroll cue.
 - **Quilted service cards** — rotating pastel tiles (slate → sand → sage → clay → stone → ink) in a 3-col grid, icon chip + serif heading + text-link.
 - **Portfolio grid** — masonry-style navy tour tiles with gradient overlay, category, serif title, and a glass play button that turns brand blue on hover.

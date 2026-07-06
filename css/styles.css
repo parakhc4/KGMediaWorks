@@ -39,6 +39,7 @@
   /* ---- Typography ---- */
   --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-sans:  'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-logo:  'Montserrat', var(--font-sans);
 
   --text-caption:     0.75rem;   /* 12px */
   --text-body-sm:     0.875rem;  /* 14px */
@@ -278,16 +279,36 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 400; letter-spacing: -
 }
 .nav__links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
 
-.brand { display: inline-flex; align-items: center; gap: 0.6rem; color: #fff; }
-.brand__mark { width: 34px; height: 34px; flex: none; }
-.brand__name {
-  font-family: var(--font-serif);
-  font-weight: 500;
-  font-size: 1.32rem;
-  letter-spacing: -0.01em;
+/* Logo lockup — "KG" monogram (blue G) + MEDIAWORKS + "360° Virtual Tours" tagline */
+.brand { display: inline-flex; align-items: flex-start; gap: 0.42em; color: #fff; line-height: 1; }
+.brand__kg {
+  font-family: var(--font-logo);
+  font-weight: 800;
+  font-size: 1.34rem;
+  letter-spacing: -0.03em;
   line-height: 1;
 }
-.brand__name b { font-weight: 500; color: var(--color-signal); }
+.brand__kg i { font-style: normal; color: var(--color-signal); }
+.brand__wm { display: inline-flex; flex-direction: column; }
+.brand__main {
+  font-family: var(--font-logo);
+  font-weight: 800;
+  font-size: 1.34rem;
+  letter-spacing: 0.015em;
+  line-height: 1;
+}
+.brand__tag {
+  font-family: var(--font-logo);
+  font-weight: 700;
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.72);
+  margin-top: 4px;
+  white-space: nowrap;
+}
+/* On light surfaces (if the lockup is ever placed on bone), invert the text colors */
+.brand--dark { color: var(--color-charcoal); }
+.brand--dark .brand__tag { color: var(--color-pewter); }
 
 .nav__actions { display: flex; align-items: center; gap: 0.75rem; }
 
