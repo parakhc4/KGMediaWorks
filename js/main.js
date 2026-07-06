@@ -37,15 +37,6 @@
     if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) closeNav();
   });
 
-  /* ---- Fade the live hero tour in once it loads ---- */
-  var heroTour = document.querySelector('.hero__tour');
-  if (heroTour) {
-    var revealTour = function () { heroTour.classList.add('is-loaded'); };
-    heroTour.addEventListener('load', revealTour);
-    // Fallback so the tour still appears if the load event already fired or is slow
-    setTimeout(revealTour, 3000);
-  }
-
   /* ---- Live tour previews: fade each portfolio iframe in once it loads.
      If a tour never loads (blocked/offline), it stays hidden and the gradient shows. ---- */
   document.querySelectorAll('.work__tour').forEach(function (frame) {

@@ -90,20 +90,12 @@
 
   <!-- ============================ HERO ============================ -->
   <section class="hero" id="home">
-    <!-- Hero backdrop = the live Waterwoods 360° tour. The gradient scene shows while it
-         loads (and as a fallback if a tour host blocks embedding). Swap the iframe src to
-         feature a different tour. -->
+    <!-- Hero backdrop = a 360° equirectangular photo (assets/WEBSITECOVER.jpeg) rendered
+         as a slowly auto-rotating, non-interactive sphere by js/pano.js. The gradient
+         scene shows while it loads and as a fallback if the image/WebGL is unavailable. -->
     <div class="hero__bg" aria-hidden="true"><div class="scene scene--architecture"></div></div>
-    <iframe class="hero__tour" src="https://www.waterwoods.in/kabini/virtualtour/"
-            title="Waterwoods Jungle Lodge, Kabini — live 360° virtual tour"
-            loading="eager" referrerpolicy="no-referrer-when-downgrade"
-            allow="fullscreen; accelerometer; gyroscope; magnetometer; xr-spatial-tracking"></iframe>
+    <canvas class="hero__pano" data-src="assets/WEBSITECOVER.jpeg" aria-hidden="true"></canvas>
     <div class="hero__scrim" aria-hidden="true"></div>
-
-    <a class="hero__live" href="https://www.waterwoods.in/kabini/virtualtour/" target="_blank" rel="noopener">
-      <span class="hero__live-dot"></span> LIVE 360° · Waterwoods, Kabini
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-    </a>
 
     <div class="container hero__inner">
       <span class="eyebrow hero__eyebrow reveal">KGMediaWorks · Immersive Media Studio</span>
@@ -638,5 +630,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/pano.js"></script>
 </body>
 </html>
