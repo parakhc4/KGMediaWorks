@@ -35,8 +35,9 @@ Then visit <http://localhost:8000>.
 Everything is intentionally easy to edit:
 
 - **Colors / fonts / radius** — edit the `:root` tokens at the top of `css/styles.css`. Changing `--color-ink` and `--color-signal` re-themes the whole site.
-- **Copy** — all text lives in `index.html`. The **portfolio** and **trust strip** already use your real projects and live 360°-tour links. Still to personalise before going live:
-  - **Contact details** — email `hello@kgmediaworks.com`, phone `+91 00000 00000`, and the Bhopal studio line are placeholders. Update them in the **Contact** section and footer.
+- **Hero tour** — the hero backdrop is the **live Waterwoods 360° tour** embedded via `<iframe class="hero__tour">` in `index.html`. It's non-interactive (so it never traps page scroll); the "LIVE 360°" pill and CTAs open the full interactive tour. To feature a different tour, change the iframe `src` (and the pill's `href`/label). A gradient scene shows while it loads. **Caveat:** a few tour hosts block being embedded (via `X-Frame-Options`/CSP) — check your deployed hero; if the tour doesn't appear, send me a still image and I'll switch the hero to a static photo.
+- **Copy** — all text lives in `index.html`. The **portfolio** and **trust strip** use your real projects and live 360°-tour links; contact **email** (`info@kgmediaworks.com`) and **phone** (`+91 77709 07656`) are set. Still to personalise:
+  - **Studio location** — the "Bhopal, India · Serving pan-India" line is a reasonable guess; refine in the **Contact** section if needed.
   - **Testimonials** — the three quotes use illustrative placeholder names (a resort GM, a wedding-venue owner, a boutique-hotel director), *not* your real clients. Swap in genuine client quotes with permission — don't attribute invented quotes to named businesses.
   - **Social links** — the footer Instagram/YouTube/LinkedIn icons point to `#`; add your real profile URLs.
 - **Real photography** — the site currently renders self-contained CSS/SVG "scenes" as placeholders. To use real tour photos, replace a scene block:

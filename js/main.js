@@ -37,6 +37,15 @@
     if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) closeNav();
   });
 
+  /* ---- Fade the live hero tour in once it loads ---- */
+  var heroTour = document.querySelector('.hero__tour');
+  if (heroTour) {
+    var revealTour = function () { heroTour.classList.add('is-loaded'); };
+    heroTour.addEventListener('load', revealTour);
+    // Fallback so the tour still appears if the load event already fired or is slow
+    setTimeout(revealTour, 3000);
+  }
+
   /* ---- Reveal on scroll ---- */
   var revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && revealEls.length) {
