@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KGMediaWorks — 360° Virtual Tours for Resorts, Hotels & Wedding Venues</title>
+  <meta name="description" content="KGMediaWorks produces immersive 360° virtual tours for resorts, hotels, wedding venues, and luxury stays — with day & night views, Google Maps landmarks, and interactive hotspots guests can explore anywhere." />
+  <meta name="theme-color" content="#0c3a38" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Progressive enhancement: mark JS available before paint so reveal-on-scroll
+       hides content only when we can also reveal it. No-JS users see everything. -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Fonts: Fraunces (editorial serif) + Inter (functional sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================ MARQUEE ============================ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>360° Virtual Tours</span>
+      <span>Matterport 3D Walkthroughs</span>
+      <span>Google Street View Trusted</span>
+      <span>Aerial &amp; Drone Cinematography</span>
+      <span>Real Estate · Hospitality · Retail</span>
+      <!-- duplicate for seamless loop -->
+      <span>360° Virtual Tours</span>
+      <span>Matterport 3D Walkthroughs</span>
+      <span>Google Street View Trusted</span>
+      <span>Aerial &amp; Drone Cinematography</span>
+      <span>Real Estate · Hospitality · Retail</span>
+    </div>
+  </div>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="KGMediaWorks home">
+        <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+          <ellipse cx="20" cy="20" rx="8.5" ry="18.5" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+          <circle cx="20" cy="20" r="6.4" fill="#f2a541"/>
+          <circle cx="20" cy="20" r="2.4" fill="#0c3a38"/>
+        </svg>
+        <span class="brand__name">KG<b>Media</b>Works</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="#contact" class="btn btn--on-dark">Book a Shoot</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav__top">
+      <span class="brand__name" style="color:#fff">KG<b>Media</b>Works</span>
+      <button class="nav__toggle" id="navClose" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav__links" aria-label="Mobile">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="mobile-nav__foot">
+      <a href="#contact" class="btn btn--accent btn--lg">Book a Shoot</a>
+    </div>
+  </div>
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero" id="home">
+    <!-- Replace .media block with a full-bleed tour photo: <img src="assets/hero.jpg" alt=""> -->
+    <div class="media hero__bg" aria-hidden="true">
+      <div class="scene scene--interior"></div>
+      <div class="scene__grid"></div>
+      <div class="badge-360" style="top: 20%; left: 8%;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5c5.5 0 10 2.2 10 5s-4.5 5-10 5S2 12.8 2 10s4.5-5 10-5Z"/><path d="M8 13v4l3-2"/></svg>
+        360°
+      </div>
+      <div class="hotspot" style="top: 34%; left: 73%;"></div>
+      <div class="hotspot" style="top: 60%; left: 85%;"></div>
+    </div>
+
+    <div class="container hero__inner">
+      <span class="eyebrow hero__eyebrow reveal">KGMediaWorks · Immersive Media Studio</span>
+      <h1 class="reveal">Step inside every space, <em>before</em> you arrive.</h1>
+      <p class="hero__sub reveal">KGMediaWorks produces cinematic 360° virtual tours for resorts, hotels, wedding venues, and luxury stays — with day &amp; night views, maps, and interactive hotspots your guests can explore from anywhere.</p>
+
+      <div class="hero__cta reveal">
+        <a href="#work" class="btn btn--accent btn--lg">Explore Our Tours</a>
+        <a href="#contact" class="btn btn--ghost-light btn--lg">Get a Quote</a>
+      </div>
+
+      <div class="hero__meta reveal">
+        <div><b>360°</b><span>Day &amp; night views</span></div>
+        <div><b>4K·8K</b><span>Panoramic quality</span></div>
+        <div><b>Google</b><span>Maps &amp; Street View</span></div>
+      </div>
+    </div>
+
+    <a href="#services" class="scroll-cue" aria-label="Scroll to explore">
+      Scroll to Explore
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+    </a>
+  </section>
+
+  <!-- ============================ TRUST ============================ -->
+  <div class="trust">
+    <div class="container trust__inner">
+      <span class="trust__label">Trusted by</span>
+      <div class="trust__logos">
+        <span>Graces&nbsp;Resort</span>
+        <span>The&nbsp;Nest&nbsp;Jaipur</span>
+        <span>Lemon&nbsp;Tree&nbsp;Hotels</span>
+        <span>Waterwoods&nbsp;Kabini</span>
+        <span>Pico&nbsp;Sands</span>
+        <span>Giovanni&nbsp;Village</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================ SERVICES ============================ -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">What we do</span>
+        <h2>Everything your space needs to be explored online.</h2>
+        <p class="lead">From a hillside resort to an intimate wedding lawn, we match the right capture to your property — and build a tour guests actually want to walk through.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="svc-card svc-card--slate reveal">
+          <span class="svc-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 21h18M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M9 7h.01M15 7h.01M9 11h.01M15 11h.01M10 21v-4h4v4"/></svg>
+          </span>
+          <h3>Hotel &amp; Resort Tours</h3>
+          <p>Immersive 360° walkthroughs of rooms, lobbies, restaurants and grounds — every category, room to lawn.</p>
+          <a href="#contact" class="text-link svc-card__link">Get a quote
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <article class="svc-card svc-card--sand reveal">
+          <span class="svc-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M20.8 6.6a5 5 0 0 0-7.1 0L12 8.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 22l8.8-8.3a5 5 0 0 0 0-7.1Z"/></svg>
+          </span>
+          <h3>Wedding Venue Tours</h3>
+          <p>Show planners your lawns with sizes, banquet &amp; mandap setups, and capacities — day and evening.</p>
+          <a href="#contact" class="text-link svc-card__link">Get a quote
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <article class="svc-card svc-card--sage reveal">
+          <span class="svc-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+          </span>
+          <h3>Day &amp; Night Views</h3>
+          <p>Capture each space in daylight and after dark, so guests feel the property's full ambiance.</p>
+          <a href="#contact" class="text-link svc-card__link">Get a quote
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <article class="svc-card svc-card--clay reveal">
+          <span class="svc-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8Z"/></svg>
+          </span>
+          <h3>Maps &amp; Landmarks</h3>
+          <p>Google Street View publishing plus nearby landmarks and distances built right into the tour.</p>
+          <a href="#contact" class="text-link svc-card__link">Get a quote
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <article class="svc-card svc-card--stone reveal">
+          <span class="svc-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg>
+          </span>
+          <h3>Aerial &amp; Drone</h3>
+          <p>Cinematic aerial footage that sets your resort, lodge or villa in its full natural surroundings.</p>
+          <a href="#contact" class="text-link svc-card__link">Get a quote
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <article class="svc-card svc-card--ink reveal">
+          <span class="svc-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 10v4M8 6v12M12 3v18M16 7v10M20 10v4"/></svg>
+          </span>
+          <h3>AI Audio &amp; Custom</h3>
+          <p>Branded interfaces, circular hotspots, embedded video, and optional AI narration &amp; background music.</p>
+          <a href="#contact" class="text-link svc-card__link" style="color:var(--color-signal)">Get a quote
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ WORK / PORTFOLIO ============================ -->
+  <section class="section section--tight" id="work">
+    <div class="container">
+      <div class="section-head reveal" style="display:flex; justify-content:space-between; align-items:flex-end; max-width:none; gap:2rem; flex-wrap:wrap;">
+        <div style="max-width:560px">
+          <span class="eyebrow">Selected work</span>
+          <h2 style="font-size:var(--text-heading); margin-top:0.6rem;">Tours worth getting lost in.</h2>
+          <p class="lead" style="margin-top:0.75rem;">Click any project to open the live 360° experience in a new tab.</p>
+        </div>
+        <a href="#contact" class="text-link">Start your own tour
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- Live 360° tours produced by KGMediaWorks. Links open the real experiences. -->
+        <a href="https://www.gracesresort.com/virtualtour" target="_blank" rel="noopener" class="work work--wide work--tall reveal">
+          <div class="media"><div class="scene scene--twilight"></div><div class="pano-frame"><span></span><span></span><span></span><span></span></div><div class="badge-360" style="top:1rem; left:1rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5c5.5 0 10 2.2 10 5s-4.5 5-10 5S2 12.8 2 10s4.5-5 10-5Z"/><path d="M8 13v4l3-2"/></svg>360°</div></div>
+          <div class="work__body">
+            <div><span class="work__cat">Resort · Bhopal–Indore</span><div class="work__title">Graces Resort</div></div>
+            <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </a>
+        <a href="https://thenestluxuryresorts.com/Virtualtour" target="_blank" rel="noopener" class="work work--wide work--tall reveal">
+          <div class="media"><div class="scene scene--interior"></div><div class="hotspot" style="top:34%; left:64%;"></div></div>
+          <div class="work__body">
+            <div><span class="work__cat">Wedding Resort · Jaipur</span><div class="work__title">The Nest Luxury Resort</div></div>
+            <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </a>
+
+        <a href="https://www.lemontreehotels.com/bhopal/Virtualtour" target="_blank" rel="noopener" class="work reveal">
+          <div class="media"><div class="scene scene--architecture"></div></div>
+          <div class="work__body">
+            <div><span class="work__cat">Hotel · Bhopal</span><div class="work__title">Lemon Tree Hotel</div></div>
+            <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </a>
+        <a href="https://waterwoods.in/kabini/virtualtour" target="_blank" rel="noopener" class="work reveal">
+          <div class="media"><div class="scene scene--gallery"></div></div>
+          <div class="work__body">
+            <div><span class="work__cat">Jungle Lodge · Kabini</span><div class="work__title">Waterwoods Lodge</div></div>
+            <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </a>
+        <a href="https://www.picosandshotel.com/pico-sands-hotel-360-view/" target="_blank" rel="noopener" class="work reveal">
+          <div class="media"><div class="scene scene--twilight"></div></div>
+          <div class="work__body">
+            <div><span class="work__cat">Beach Resort</span><div class="work__title">Pico Sands Hotel</div></div>
+            <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </a>
+
+        <a href="https://peacehouses.com/properties/zivana-peace-house/360-tour" target="_blank" rel="noopener" class="work reveal">
+          <div class="media"><div class="scene scene--interior"></div></div>
+          <div class="work__body">
+            <div><span class="work__cat">6 BHK Pool Villa · Jaipur</span><div class="work__title">Zivana Peace House</div></div>
+            <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </a>
+        <a href="https://countryside.co.in/virtualtour" target="_blank" rel="noopener" class="work reveal">
+          <div class="media"><div class="scene scene--architecture"></div></div>
+          <div class="work__body">
+            <div><span class="work__cat">Retreat · Naukuchiatal</span><div class="work__title">Pear Orchard</div></div>
+            <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </a>
+        <a href="http://hotelatishay.com/360view/" target="_blank" rel="noopener" class="work reveal">
+          <div class="media"><div class="scene scene--gallery"></div></div>
+          <div class="work__body">
+            <div><span class="work__cat">Hotel · Bhopal</span><div class="work__title">Atishay Hotel</div></div>
+            <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </a>
+
+        <a href="https://giovannivillage.com/giovannisuites/tour.html" target="_blank" rel="noopener" class="work work--full reveal">
+          <div class="media"><div class="scene scene--twilight"></div><div class="scene__grid"></div></div>
+          <div class="work__body">
+            <div><span class="work__cat">Luxury Suites · Giovanni Village</span><div class="work__title">Giovanni Suites</div></div>
+            <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ PROCESS BAND ============================ -->
+  <section class="section band" id="process">
+    <div class="container">
+      <div class="section-head reveal" style="max-width:640px">
+        <span class="eyebrow eyebrow--light">How it works</span>
+        <h2>From first walkthrough to live tour in four steps.</h2>
+        <p class="lead">A calm, well-run production. You point us at the space — we handle capture, editing, and delivery end to end.</p>
+      </div>
+
+      <div class="process">
+        <div class="step reveal">
+          <h3>Plan</h3>
+          <p>We scope the space, agree on shots and deliverables, and book a capture window that suits you.</p>
+        </div>
+        <div class="step reveal">
+          <h3>Capture</h3>
+          <p>On-site 360° and 3D scanning with pro lighting — most spaces are shot in a single visit.</p>
+        </div>
+        <div class="step reveal">
+          <h3>Craft</h3>
+          <p>We stitch, color-grade, and build the interactive tour with hotspots, labels, and your branding.</p>
+        </div>
+        <div class="step reveal">
+          <h3>Deliver</h3>
+          <p>Get an embed link, Google listing, and downloadable assets — plus analytics on how visitors explore.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ SPLIT FEATURE ============================ -->
+  <section class="section" id="about">
+    <div class="container split">
+      <div class="split__media media reveal">
+        <div class="scene scene--gallery"></div>
+        <div class="scene__grid"></div>
+        <div class="badge-360" style="bottom:1.25rem; left:1.25rem;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5c5.5 0 10 2.2 10 5s-4.5 5-10 5S2 12.8 2 10s4.5-5 10-5Z"/><path d="M8 13v4l3-2"/></svg>
+          Interactive
+        </div>
+        <div class="hotspot" style="top:38%; left:48%;"></div>
+      </div>
+      <div class="split__copy reveal">
+        <span class="eyebrow">Why KGMediaWorks</span>
+        <h2 style="font-size:var(--text-heading); font-weight:300; margin-block:0.6rem 1rem;">A media studio that treats your space like a story.</h2>
+        <p class="lead">We're a small, obsessive team of photographers and 3D artists. We care about the details that make a tour feel effortless — smooth transitions, honest color, and navigation anyone can use.</p>
+        <ul class="split__list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Day &amp; night views of every space</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Nearby landmarks, distances &amp; maps built in</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Circular hotspot navigation with an easy menu</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Works on desktop, mobile &amp; VR headsets</li>
+        </ul>
+        <div style="margin-top:2rem;">
+          <a href="#contact" class="btn btn--primary btn--lg">Start a project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ BENEFITS BAND ============================ -->
+  <section class="section band">
+    <div class="container">
+      <div class="section-head reveal" style="max-width:640px">
+        <span class="eyebrow eyebrow--light">The payoff</span>
+        <h2>Tours that do real work for your business.</h2>
+      </div>
+      <div class="benefits">
+        <div class="benefit reveal">
+          <span class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></span>
+          <div><h3>Engage 3× longer</h3><p>Interactive tours keep visitors on your listing far longer than photos alone.</p></div>
+        </div>
+        <div class="benefit reveal">
+          <span class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <div><h3>Qualify faster</h3><p>Buyers and guests self-tour first, so every enquiry that reaches you is warmer.</p></div>
+        </div>
+        <div class="benefit reveal">
+          <span class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <div><h3>Be found on Google</h3><p>Street View listings boost your presence in Maps and local Search results.</p></div>
+        </div>
+        <div class="benefit reveal">
+          <span class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a10 10 0 1 0 10 10h-10V2Z"/></svg></span>
+          <div><h3>Understand visitors</h3><p>Built-in analytics show which rooms and hotspots draw the most attention.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TESTIMONIALS ============================ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--center reveal">
+        <span class="eyebrow">Kind words</span>
+        <h2>Clients who love showing off their spaces.</h2>
+      </div>
+      <div class="testi-grid">
+        <figure class="testi testi--slate reveal">
+          <div class="testi__stars" aria-label="5 out of 5">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 6.9L12 17.8 5.8 21l1.4-6.9L2 9.3l7-.8L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 6.9L12 17.8 5.8 21l1.4-6.9L2 9.3l7-.8L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 6.9L12 17.8 5.8 21l1.4-6.9L2 9.3l7-.8L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 6.9L12 17.8 5.8 21l1.4-6.9L2 9.3l7-.8L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 6.9L12 17.8 5.8 21l1.4-6.9L2 9.3l7-.8L12 2Z"/></svg>
+          </div>
+          <blockquote>“Our bookings climbed once couples could tour the lawns and rooms themselves. It's the best salesperson we have.”</blockquote>
+          <figcaption class="testi__who">
+            <span class="testi__avatar">AK</span>
+            <div><b>Aanya Kapoor</b><span>General Manager, Luxury Resort</span></div>
+          </figcaption>
+        </figure>
+
+        <figure class="testi testi--sand reveal">
+          <div class="testi__stars" aria-label="5 out of 5">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 6.9L12 17.8 5.8 21l1.4-6.9L2 9.3l7-.8L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 6.9L12 17.8 5.8 21l1.4-6.9L2 9.3l7-.8L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 6.9L12 17.8 5.8 21l1.4-6.9L2 9.3l7-.8L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 6.9L12 17.8 5.8 21l1.4-6.9L2 9.3l7-.8L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 6.9L12 17.8 5.8 21l1.4-6.9L2 9.3l7-.8L12 2Z"/></svg>
+          </div>
+          <blockquote>“Wedding planners shortlist us before they even visit. Seeing the banquet setups in 360° seals the deal.”</blockquote>
+          <figcaption class="testi__who">
+            <span class="testi__avatar">RM</span>
+            <div><b>Rohan Mehta</b><span>Owner, Wedding Venue</span></div>
+          </figcaption>
+        </figure>
+
+        <figure class="testi testi--sage reveal">
+          <div class="testi__stars" aria-label="5 out of 5">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 6.9L12 17.8 5.8 21l1.4-6.9L2 9.3l7-.8L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 6.9L12 17.8 5.8 21l1.4-6.9L2 9.3l7-.8L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 6.9L12 17.8 5.8 21l1.4-6.9L2 9.3l7-.8L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 6.9L12 17.8 5.8 21l1.4-6.9L2 9.3l7-.8L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 6.9L12 17.8 5.8 21l1.4-6.9L2 9.3l7-.8L12 2Z"/></svg>
+          </div>
+          <blockquote>“Professional, punctual and genuinely creative. The day and night views make our property feel alive.”</blockquote>
+          <figcaption class="testi__who">
+            <span class="testi__avatar">SF</span>
+            <div><b>Sara Fernandes</b><span>Director, Boutique Hotel</span></div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ STATS ============================ -->
+  <section class="section section--tight" style="background:var(--color-bone-2); border-block:1px solid var(--color-line);">
+    <div class="container stats">
+      <div class="stat reveal"><b>Rooms</b><span>Every category captured</span></div>
+      <div class="stat reveal"><b>Lawns</b><span>Shown with real sizes</span></div>
+      <div class="stat reveal"><b>Banquets</b><span>Multiple setups staged</span></div>
+      <div class="stat reveal"><b>Terrace</b><span>Nearby landmark views</span></div>
+    </div>
+  </section>
+
+  <!-- ============================ CTA ============================ -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-panel reveal">
+        <div class="scene scene--twilight" aria-hidden="true"></div>
+        <span class="eyebrow eyebrow--light" style="justify-content:center;">Ready when you are</span>
+        <h2 style="margin-top:0.75rem;">Let's put your space on the map.</h2>
+        <p>Tell us about your property and goals. We'll recommend the right capture package and send a fixed quote within one business day.</p>
+        <div class="hero__cta">
+          <a href="#contact" class="btn btn--accent btn--lg">Book a Shoot</a>
+          <a href="#work" class="btn btn--ghost-light btn--lg">View Sample Tours</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ CONTACT ============================ -->
+  <section class="section" id="contact">
+    <div class="container contact">
+      <div class="contact__aside reveal">
+        <span class="eyebrow">Get in touch</span>
+        <h2>Start your virtual tour.</h2>
+        <p class="lead">Have a space you'd love to show off? Send us the details and we'll be in touch within one business day.</p>
+        <div class="contact__list">
+          <div class="contact__item">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+            <div><b>Email</b><a href="mailto:hello@kgmediaworks.com">hello@kgmediaworks.com</a></div>
+          </div>
+          <div class="contact__item">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+            <div><b>Phone</b><a href="tel:+910000000000">+91 00000 00000</a></div>
+          </div>
+          <div class="contact__item">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div><b>Studio</b><span>Bhopal, India · Serving pan-India</span></div>
+          </div>
+        </div>
+      </div>
+
+      <form class="form reveal" id="contactForm" novalidate>
+        <div class="form__row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@company.com" required />
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="field">
+            <label for="type">Space type</label>
+            <select id="type" name="type">
+              <option>Resort</option>
+              <option>Hotel</option>
+              <option>Wedding venue</option>
+              <option>Villa / homestay</option>
+              <option>Restaurant / café</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="service">Service</label>
+            <select id="service" name="service">
+              <option>360° Virtual Tour</option>
+              <option>Google Street View</option>
+              <option>Day &amp; Night Views</option>
+              <option>Aerial / Drone</option>
+              <option>AI Audio &amp; Music</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Tell us about your space</label>
+          <textarea id="message" name="message" placeholder="Location, approximate size, timeline, and anything else we should know…"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg" style="width:100%;">Send enquiry</button>
+        <p class="form__status" id="formStatus" role="status" aria-live="polite" hidden></p>
+        <p class="form__note">We reply within one business day. No spam, ever.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__intro">
+          <a href="#home" class="brand" aria-label="KGMediaWorks home">
+            <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+              <ellipse cx="20" cy="20" rx="8.5" ry="18.5" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+              <circle cx="20" cy="20" r="6.4" fill="#f2a541"/>
+              <circle cx="20" cy="20" r="2.4" fill="#0c3a38"/>
+            </svg>
+            <span class="brand__name">KG<b>Media</b>Works</span>
+          </a>
+          <p>Immersive 360° virtual tours for resorts, hotels, wedding venues, and luxury stays worth exploring.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3V9Z" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 10v7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Services</h4>
+          <a href="#services">Hotel &amp; Resort Tours</a>
+          <a href="#services">Wedding Venue Tours</a>
+          <a href="#services">Day &amp; Night Views</a>
+          <a href="#services">Google Street View</a>
+          <a href="#services">Aerial &amp; Drone</a>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="#about">About us</a>
+          <a href="#work">Our work</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Industries</h4>
+          <a href="#work">Resorts &amp; hotels</a>
+          <a href="#work">Wedding venues</a>
+          <a href="#work">Villas &amp; homestays</a>
+          <a href="#work">Retreats &amp; lodges</a>
+        </div>
+      </div>
+
+      <div class="footer__bar">
+        <p>© <span id="year">2026</span> KGMediaWorks. All rights reserved.</p>
+        <nav aria-label="Legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#contact">Get a quote</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
