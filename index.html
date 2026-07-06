@@ -237,13 +237,14 @@
       </div>
 
       <div class="portfolio-grid">
-        <!-- Live 360° tours by KGMediaWorks. Each tile shows a preview photo
-             (assets/work-*.jpg) layered over a gradient fallback; if the photo is
-             missing the gradient shows. Links open the real experiences in a new tab. -->
-        <a href="https://www.gracesresort.com/virtualtour" target="_blank" rel="noopener" class="work work--wide work--tall reveal">
+        <!-- Each tile embeds the LIVE hosted 360° tour as a lazy-loaded, non-interactive
+             preview over a gradient fallback. The stretched .work__link opens the full
+             interactive tour in a new tab. If a tour blocks embedding, its preview stays
+             hidden and the gradient shows. -->
+        <article class="work work--wide work--tall reveal">
           <div class="media">
             <div class="scene scene--twilight"></div>
-            <img class="work__img" src="assets/work-graces.jpg" alt="Graces Resort 360° virtual tour" loading="lazy">
+            <iframe class="work__tour" src="https://www.gracesresort.com/virtualtour" title="Graces Resort — live 360° tour preview" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="pano-frame"><span></span><span></span><span></span><span></span></div>
             <div class="badge-360" style="top:1rem; left:1rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5c5.5 0 10 2.2 10 5s-4.5 5-10 5S2 12.8 2 10s4.5-5 10-5Z"/><path d="M8 13v4l3-2"/></svg>360°</div>
           </div>
@@ -251,80 +252,88 @@
             <div><span class="work__cat">Resort · Bhopal–Indore</span><div class="work__title">Graces Resort</div></div>
             <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
-        </a>
-        <a href="https://thenestluxuryresorts.com/Virtualtour" target="_blank" rel="noopener" class="work work--wide work--tall reveal">
+          <a class="work__link" href="https://www.gracesresort.com/virtualtour" target="_blank" rel="noopener" aria-label="Open Graces Resort live 360° tour in a new tab"></a>
+        </article>
+        <article class="work work--wide work--tall reveal">
           <div class="media">
             <div class="scene scene--interior"></div>
-            <img class="work__img" src="assets/work-nest.jpg" alt="The Nest Luxury Resort, Jaipur 360° virtual tour" loading="lazy">
+            <iframe class="work__tour" src="https://thenestluxuryresorts.com/Virtualtour" title="The Nest Luxury Resort, Jaipur — live 360° tour preview" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="badge-360" style="top:1rem; left:1rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5c5.5 0 10 2.2 10 5s-4.5 5-10 5S2 12.8 2 10s4.5-5 10-5Z"/><path d="M8 13v4l3-2"/></svg>360°</div>
           </div>
           <div class="work__body">
             <div><span class="work__cat">Wedding Resort · Jaipur</span><div class="work__title">The Nest Luxury Resort</div></div>
             <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
-        </a>
+          <a class="work__link" href="https://thenestluxuryresorts.com/Virtualtour" target="_blank" rel="noopener" aria-label="Open The Nest Luxury Resort live 360° tour in a new tab"></a>
+        </article>
 
-        <a href="https://www.lemontreehotels.com/bhopal/Virtualtour" target="_blank" rel="noopener" class="work reveal">
+        <article class="work reveal">
           <div class="media">
             <div class="scene scene--architecture"></div>
-            <img class="work__img" src="assets/work-lemontree.jpg" alt="Lemon Tree Hotel, Bhopal 360° virtual tour" loading="lazy">
+            <iframe class="work__tour" src="https://www.lemontreehotels.com/bhopal/Virtualtour" title="Lemon Tree Hotel, Bhopal — live 360° tour preview" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="work__body">
             <div><span class="work__cat">Hotel · Bhopal</span><div class="work__title">Lemon Tree Hotel</div></div>
             <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
-        </a>
-        <a href="https://waterwoods.in/kabini/virtualtour" target="_blank" rel="noopener" class="work reveal">
+          <a class="work__link" href="https://www.lemontreehotels.com/bhopal/Virtualtour" target="_blank" rel="noopener" aria-label="Open Lemon Tree Hotel live 360° tour in a new tab"></a>
+        </article>
+        <article class="work reveal">
           <div class="media">
             <div class="scene scene--gallery"></div>
-            <img class="work__img" src="assets/work-kabini.jpg" alt="Waterwoods Jungle Lodge, Kabini 360° virtual tour" loading="lazy">
+            <iframe class="work__tour" src="https://waterwoods.in/kabini/virtualtour" title="Waterwoods Jungle Lodge, Kabini — live 360° tour preview" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="work__body">
             <div><span class="work__cat">Jungle Lodge · Kabini</span><div class="work__title">Waterwoods Lodge</div></div>
             <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
-        </a>
-        <a href="http://hotelatishay.com/360view/" target="_blank" rel="noopener" class="work reveal">
+          <a class="work__link" href="https://waterwoods.in/kabini/virtualtour" target="_blank" rel="noopener" aria-label="Open Waterwoods Lodge live 360° tour in a new tab"></a>
+        </article>
+        <article class="work reveal">
           <div class="media">
             <div class="scene scene--twilight"></div>
-            <img class="work__img" src="assets/work-atishay.jpg" alt="Hotel Atishay, Bhopal 360° virtual tour" loading="lazy">
+            <iframe class="work__tour" src="https://hotelatishay.com/360view/" title="Hotel Atishay, Bhopal — live 360° tour preview" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="work__body">
             <div><span class="work__cat">Hotel · Bhopal</span><div class="work__title">Atishay Hotel</div></div>
             <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
-        </a>
+          <a class="work__link" href="https://hotelatishay.com/360view/" target="_blank" rel="noopener" aria-label="Open Hotel Atishay live 360° tour in a new tab"></a>
+        </article>
 
-        <a href="https://peacehouses.com/properties/zivana-peace-house/360-tour" target="_blank" rel="noopener" class="work reveal">
+        <article class="work reveal">
           <div class="media">
             <div class="scene scene--interior"></div>
-            <img class="work__img" src="assets/work-zivana.jpg" alt="Zivana Peace House pool villa, Jaipur 360° virtual tour" loading="lazy">
+            <iframe class="work__tour" src="https://peacehouses.com/properties/zivana-peace-house/360-tour" title="Zivana Peace House, Jaipur — live 360° tour preview" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="work__body">
             <div><span class="work__cat">6 BHK Pool Villa · Jaipur</span><div class="work__title">Zivana Peace House</div></div>
             <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
-        </a>
-        <a href="https://countryside.co.in/virtualtour" target="_blank" rel="noopener" class="work reveal">
+          <a class="work__link" href="https://peacehouses.com/properties/zivana-peace-house/360-tour" target="_blank" rel="noopener" aria-label="Open Zivana Peace House live 360° tour in a new tab"></a>
+        </article>
+        <article class="work reveal">
           <div class="media">
             <div class="scene scene--architecture"></div>
-            <img class="work__img" src="assets/work-pear.jpg" alt="Pear Orchard, Naukuchiatal 360° virtual tour" loading="lazy">
+            <iframe class="work__tour" src="https://countryside.co.in/virtualtour" title="Pear Orchard, Naukuchiatal — live 360° tour preview" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="work__body">
             <div><span class="work__cat">Retreat · Naukuchiatal</span><div class="work__title">Pear Orchard</div></div>
             <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
-        </a>
-        <a href="https://giovannivillage.com/giovannisuites/tour.html" target="_blank" rel="noopener" class="work reveal">
+          <a class="work__link" href="https://countryside.co.in/virtualtour" target="_blank" rel="noopener" aria-label="Open Pear Orchard live 360° tour in a new tab"></a>
+        </article>
+        <article class="work reveal">
           <div class="media">
             <div class="scene scene--twilight"></div>
-            <img class="work__img" src="assets/work-giovanni.jpg" alt="Giovanni Suites 360° virtual tour" loading="lazy">
+            <iframe class="work__tour" src="https://giovannivillage.com/giovannisuites/tour.html" title="Giovanni Suites — live 360° tour preview" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="work__body">
             <div><span class="work__cat">Luxury Suites · Giovanni Village</span><div class="work__title">Giovanni Suites</div></div>
             <span class="work__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
           </div>
-        </a>
+          <a class="work__link" href="https://giovannivillage.com/giovannisuites/tour.html" target="_blank" rel="noopener" aria-label="Open Giovanni Suites live 360° tour in a new tab"></a>
+        </article>
       </div>
     </div>
   </section>
