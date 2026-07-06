@@ -2,7 +2,7 @@
 
 Marketing website for **KGMediaWorks** — an immersive media studio producing 360° virtual tours, Matterport 3D walkthroughs, Google Street View experiences, and aerial/drone media for real estate, hospitality, retail, and commercial spaces.
 
-It's a fast, dependency-free static site (plain HTML, CSS, and vanilla JS) styled with a bespoke **immersive-editorial** design system — deep petrol teal + warm amber on a bone canvas, editorial Fraunces serif paired with Inter. See [`DESIGN.md`](./DESIGN.md) for the full style reference.
+It's a fast, dependency-free static site (plain HTML, CSS, and vanilla JS) styled with a bespoke **immersive-editorial** design system — deep ocean navy + the brand blue `#009edf` on a bone canvas, editorial Fraunces serif paired with Inter. See [`DESIGN.md`](./DESIGN.md) for the full style reference.
 
 ## Structure
 
@@ -49,7 +49,7 @@ Everything is intentionally easy to edit:
   <div class="media"><img src="assets/your-tour.jpg" alt="Living room virtual tour"></div>
   ```
 
-  Drop images into `assets/`. They'll be cropped with `object-fit: cover`, and the teal backdrop shows through while they load.
+  Drop images into `assets/`. They'll be cropped with `object-fit: cover`, and the navy backdrop shows through while they load.
 - **Contact form** — `js/main.js` handles the form as a front-end demo (validation + success message). Wire it to a real backend or a form service (Formspree, Basin, Netlify Forms, etc.) by pointing the form at your endpoint.
 
 ## Deploy

@@ -72,7 +72,7 @@
   var lastScroll = 0;
   window.addEventListener('scroll', function () {
     var y = window.scrollY;
-    if (header) header.style.boxShadow = y > 10 ? '0 10px 30px rgba(7,37,34,0.18)' : 'none';
+    if (header) header.style.boxShadow = y > 10 ? '0 10px 30px rgba(5,26,42,0.2)' : 'none';
     lastScroll = y;
   }, { passive: true });
 
