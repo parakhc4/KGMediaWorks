@@ -46,6 +46,19 @@
     setTimeout(revealTour, 3000);
   }
 
+  /* ---- Portfolio preview images: try .jpg, then .png, else fall back to the gradient scene ---- */
+  document.querySelectorAll('.work__img').forEach(function (img) {
+    img.addEventListener('error', function () {
+      var src = img.getAttribute('src');
+      if (!img.dataset.triedPng && /\.jpe?g$/i.test(src)) {
+        img.dataset.triedPng = '1';
+        img.setAttribute('src', src.replace(/\.jpe?g$/i, '.png'));
+      } else {
+        img.remove(); // no preview file yet — the gradient scene shows through
+      }
+    });
+  });
+
   /* ---- Reveal on scroll ---- */
   var revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && revealEls.length) {

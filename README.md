@@ -40,16 +40,8 @@ Everything is intentionally easy to edit:
   - **Studio location** — the "Bhopal, India · Serving pan-India" line is a reasonable guess; refine in the **Contact** section if needed.
   - **Testimonials** — the three quotes use illustrative placeholder names (a resort GM, a wedding-venue owner, a boutique-hotel director), *not* your real clients. Swap in genuine client quotes with permission — don't attribute invented quotes to named businesses.
   - **Social links** — the footer Instagram/YouTube/LinkedIn icons point to `#`; add your real profile URLs.
-- **Real photography** — the site currently renders self-contained CSS/SVG "scenes" as placeholders. To use real tour photos, replace a scene block:
-
-  ```html
-  <!-- from -->
-  <div class="media"><div class="scene scene--interior"></div></div>
-  <!-- to -->
-  <div class="media"><img src="assets/your-tour.jpg" alt="Living room virtual tour"></div>
-  ```
-
-  Drop images into `assets/`. They'll be cropped with `object-fit: cover`, and the navy backdrop shows through while they load.
+- **Portfolio previews** — each portfolio tile already has a preview `<img>` slot layered over its gradient. Just drop a screenshot into `assets/` with the matching filename and it appears automatically (no code change). See [`assets/tour-previews.md`](./assets/tour-previews.md) for the full filename list — e.g. `assets/work-graces.jpg`, `assets/work-nest.jpg`, `assets/work-lemontree.jpg`, `assets/work-kabini.jpg`, `assets/work-atishay.jpg`. `.jpg` is tried first, then `.png`; if neither exists the gradient shows.
+- **Other imagery** — for any other section, swap a scene block for a photo the same way: replace `<div class="scene scene--interior"></div>` with `<img src="assets/your-photo.jpg" alt="…">`. Images crop with `object-fit: cover`, and the navy backdrop shows through while they load.
 - **Contact form** — `js/main.js` handles the form as a front-end demo (validation + success message). Wire it to a real backend or a form service (Formspree, Basin, Netlify Forms, etc.) by pointing the form at your endpoint.
 
 ## Deploy
